@@ -13,7 +13,6 @@ data "aws_ami" "ubuntu" {
 }
 resource "aws_eip" "tfdemo" {
   instance = aws_instance.tfdemo.id
-  vpc      = true
 }
 resource "aws_eip_association" "tfdemo" {
   instance_id   = aws_instance.tfdemo.id
